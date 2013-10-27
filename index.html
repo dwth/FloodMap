@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>DWTH App</title>
+		<title>FloodMap</title>
 
 		<!-- The Min framework. -->
 
@@ -19,8 +19,8 @@
 
 			function initialize() {
 				map = new google.maps.Map(document.getElementById('map-canvas'), {
-					zoom: 13,
-					center: new google.maps.LatLng(43.695, -72.279),
+					zoom: 4,
+					center: new google.maps.LatLng(43, -72),
 					mapTypeId: google.maps.MapTypeId.TERRAIN
 				});
 			}
@@ -46,6 +46,8 @@
 		</div>
 
 		<script type="text/javascript">
+			alert("Welcome to FloodMap! FloodMap is a program that gives you a color-coded map of flood intensity in your location. To get started, navigate to your location using the map, then press Update Map; once the map loads, tiles on the map will display, indicating flooded zones (red) or nonflooded zones (green). Remember, this app uses data from users like you - so be sure to enter data by letting the app know whether the street you're on is flooded or not! If you don't see any tiles, this means that no users have entered data for your location. You should enter some!");
+		
 			if ("geolocation" in navigator) {
 				/* geolocation is available */
 				navigator.geolocation.getCurrentPosition(function(position) {
